@@ -71,30 +71,24 @@
     <div class="popup-main">
 
         <div class="title-form">
+            <?php $logocf = get_field('logo_cf', 'options');
+
+            if($logocf):?>
             <div class="logo-wrap">
-                <img src="img/logo-2.svg" alt="">
+                <img src="<?= $logocf['url'];?>" alt="<?= $logocf['alt'];?>">
             </div>
-            <h2>Contact the Anisa Foundation </h2>
-            <p>We’d love to hear from you. Connect with us by sending a message here, or you can email us at <a href="mailto:">[foundation email address]</a>.</p>
+            <?php endif;?>
+
+            <?php the_field('text_cf', 'options');?>
 
         </div>
-        <form action="#" class="default-form">
-            <div class="input-wrap">
-                <label for="name">what’s your first and last name?</label>
-                <input type="text" name="name" id="name" placeholder="Your full name">
-            </div>
-            <div class="input-wrap">
-                <label for="email">what’s your email?</label>
-                <input type="email" name="email" id="email" placeholder="Your email address">
-            </div>
-            <div class="input-wrap input-wrap-full">
-                <label for="message">what do you want us to know?</label>
-                <textarea name="message" id="message" placeholder="Write your message here"></textarea>
-            </div>
-            <div class="input-wrap-submit">
-                <button class="btn-arrow btn-blue">SUBMIT <img src="img/arrow-big.svg" alt=""></button>
-            </div>
-        </form>
+
+        <?php $form = get_field('form', 'options');
+
+        if($form){
+            echo do_shortcode('[contact-form-7 id="'.$form.'"');
+        }?>
+        
     </div>
 </div>
 

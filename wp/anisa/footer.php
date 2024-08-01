@@ -55,7 +55,7 @@ $bottom_text = get_field('bottom_text', 'options');
                 <?php foreach ($items_help as $ih):
                     $title = $ih['title'];
                     $text = $ih['text'];
-                    $image = $ih['image'];
+                    $image = $ih['logo'];
                     $link = $ih['link'];
                     ?>
                     <div class="item item-<?= $t;?>">

@@ -12,21 +12,7 @@ if( have_rows('content', $id) ): ?>
 
 <?php endif; ?>
 
-<section class="logo-text">
-    <div class="content-width">
-        <div class="content">
-            <figure>
-                <img src="img/logo-4.svg" alt="">
-            </figure>
-            <div class="text">
-                <h2>About <span>our name</span></h2>
-                <p>The Anisa Foundation is named after our family’s matriarch, Anisa Khatun.</p>
-                <p>She has been at the heart of our community work since the beginning—always leading our efforts with a deep sense of compassion and love.</p>
-                <p>The name Anisa can also be translated as “faithful companion,” “one who is friendly and gentle with others,” and “one whose presence brings calm and peace.” We think it’s the perfect evocation of our way of working, as well as a way to honour the woman who has done so much for our family and our community.</p>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <section class="bg-text-img">
     <div class="content-width">

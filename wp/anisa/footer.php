@@ -3,18 +3,27 @@
 <footer>
     <div class="content-width">
         <div class="logo-wrap">
-            <a href="index.html"><img src="img/logo-footer.svg" alt=""></a>
+            <?php $logo = get_field('logo_footer', 'options');
+
+            if($logo):?>
+                <a href="<?= get_home_url();?>"><img src="<?= $logo['url'];?>" alt="<?= $logo['alt'];?>"></a>
+            <?php endif;?>
         </div>
+
         <nav class="footer-menu">
-            <ul>
-                <li><a href="#form" class="fancybox">CONTACT</a></li>
-                <li><a href="#contact" class="fancybox">HOW YOU CAN HELP</a></li>
-                <li><a href="#">OUR STORY</a></li>
-            </ul>
+            <?php wp_nav_menu([
+                'theme_location' => 'footer-menu',
+                'container' => false,
+                'menu_class' => '',
+                'walker' => new Footer_Nav_Menu(),
+            ]);?>
         </nav>
-        <div class="bottom">
-            <p>ANISA FOUNDATION is a registered 501c3 charitable organization</p>
-        </div>
+
+        <?php if(get_field('footer_text', 'options')):?>
+            <div class="bottom">
+                <p><?php the_field('footer_text', 'options');?></p>
+            </div>
+        <?php endif;?>
     </div>
 </footer>
 

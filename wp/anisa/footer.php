@@ -27,42 +27,74 @@
     </div>
 </footer>
 
+<?php
+
+$title_help = get_field('title_help', 'options');
+$text_help = get_field('text_help', 'options');
+$items_help = get_field('items_help', 'options');
+$bottom_text = get_field('bottom_text', 'options');
+
+?>
+
 <div id="contact" class="popup-contact" style="display:none;">
     <div class="popup-main">
         <div class="title">
-            <h2>How you can help</h2>
-            <p>If you want to be part of helping us change even more lives, here’s how you can get involved.</p>
+
+            <?php if($title_help):?>
+                <h2><?= $title_help;?></h2>
+            <?php endif;?>
+
+            <?php if($text_help):?>
+                <p><?= $text_help;?></p>
+            <?php endif;?>
+
         </div>
 
-        <div class="content">
-            <div class="item item-1">
-                <figure>
-                    <img src="img/logo-1.svg" alt="">
-                </figure>
-                <div class="text">
-                    <h3>Work <span>with Path</span></h3>
-                    <p>The Anisa Foundation is a project from the team behind Path—professional photo editing that’s good for business AND good for the world. 5% of all proceeds go directly towards our charitable work. </p>
-                    <div class="btn-wrap">
-                        <a href="#work" class="btn-arrow scroll">Work with Path <img src="img/arrow.svg" alt=""></a>
+        <?php if($items_help): $t=1;?>
+            <div class="content">
+                <?php foreach ($items_help as $ih):
+                    $title = $ih['title'];
+                    $text = $ih['text'];
+                    $image = $ih['image'];
+                    $link = $ih['link'];
+                    ?>
+                    <div class="item item-<?= $t;?>">
+                        <?php if($image):?>
+                            <figure>
+                                <img src="<?= $image['url'];?>" alt="<?= $image['alt'];?>">
+                            </figure>
+                        <?php endif;?>
+                        <div class="text">
+                            <?php if($title):?>
+                                <h3><?= $title;?></h3>
+                            <?php endif;?>
+                            <?php if($text):?>
+                                <p><?= $text;?></p>
+                            <?php endif;?>
+                            <?php if( $link ):
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                                ?>
+                                <a class="" href="<?= esc_url($link_url); ?>" target="<?= esc_attr($link_target); ?>"></a>
+
+                                <div class="btn-wrap">
+                                    <a href="<?= esc_url($link_url); ?>" target="<?= esc_attr($link_target); ?>" class="btn-arrow scroll"><?= esc_html($link_title); ?> <img src="<?= get_template_directory_uri();?>/img/arrow.svg" alt=""></a>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
-                </div>
+                <?php $t++;
+                endforeach;?>
             </div>
-            <div class="item item-2">
-                <figure>
-                    <img src="img/logo-2.svg" alt="">
-                </figure>
-                <div class="text">
-                    <h3><span>Connect</span> with us</h3>
-                    <p>Have an idea for how we can work together, or another reason you want to get in touch? Contact us any time. </p>
-                    <div class="btn-wrap">
-                        <a href="#form" class="btn-arrow fancybox-form">Contact Anisa Foundation <img src="img/arrow.svg" alt=""></a>
-                    </div>
-                </div>
+        <?php endif;?>
+
+        <?php if($bottom_text):?>
+            <div class="bottom">
+                <p><?= $bottom_text;?></p>
             </div>
-        </div>
-        <div class="bottom">
-            <p>Thanks so much for your support.</p>
-        </div>
+        <?php endif;?>
+
     </div>
 </div>
 
@@ -86,9 +118,9 @@
         <?php $form = get_field('form', 'options');
 
         if($form){
-            echo do_shortcode('[contact-form-7 id="'.$form.'"');
+            echo do_shortcode('[contact-form-7 id="'.$form.'"]');
         }?>
-        
+
     </div>
 </div>
 

@@ -5,7 +5,7 @@ $image = get_sub_field('image');
 
 ?>
 
-<section class="story">
+<section class="story" id="story">
     <div class="content-width">
         <div class="content">
 

@@ -12,23 +12,7 @@ if( have_rows('content', $id) ): ?>
 
 <?php endif; ?>
 
-<section class="home-banner">
-    <div class="bg">
-        <img src="img/img-1.png" alt="">
-    </div>
-    <div class="content-width">
-        <div class="content">
-            <h1><span>Hope (and help)</span>
-                where they’re needed most</h1>
-            <div class="text-wrap">
-                <p>The Anisa Foundation is a registered charity based Gaibandha, Bangladesh. We help our community access life-changing—and sometimes life-saving—care and support.</p>
-            </div>
-            <div class="btn-wrap">
-                <a href="#contact" class="btn-arrow fancybox">See how you can help <img src="img/arrow.svg" alt=""></a>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <section class="text-img" id="work">
     <div class="bg">

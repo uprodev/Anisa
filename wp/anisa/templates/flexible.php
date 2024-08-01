@@ -14,24 +14,7 @@ if( have_rows('content', $id) ): ?>
 
 
 
-<section class="text-img" id="work">
-    <div class="bg">
-        <img src="img/after-1.svg" alt="">
-    </div>
-    <div class="content-width">
-        <div class="content">
-            <div class="text">
-                <h2><span>Why</span> we exist</h2>
-                <p>Gaibandha is one of Bangladesh’s poorest districts. So many people here suffer because they can’t afford to access critical resources, from education to medical care</p>
-                <p>When you see pain all around you, you can’t help but want to make a difference if you can. The <b>Anisa Foundation</b> is that difference.</p>
-            </div>
-            <figure>
-                <img src="img/img-2.jpg" alt="" class="img">
-                <img src="img/after-2.svg" alt="" class="after">
-            </figure>
-        </div>
-    </div>
-</section>
+
 
 <section class="text-img-line">
     <div class="content-width">

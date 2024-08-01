@@ -12,25 +12,6 @@ if( have_rows('content', $id) ): ?>
 
 <?php endif; ?>
 
-
-
-<section class="story">
-    <div class="content-width">
-        <div class="content">
-            <figure>
-                <img src="img/img-5.png" alt="">
-            </figure>
-            <div class="text">
-                <h2>Our <span>story</span></h2>
-                <p>The Anisa Foundation is a project of the Anisa Kabir family.</p>
-                <p>The foundation started as a small project—a way to give back as our family built <a href="#">Path</a>, a photo editing business with operations based in Gaibandha, Bangladesh.</p>
-                <p>We began with a pledge to dedicate 5% of company revenue to charitable contributions, and have since put over $800,000 into our work in Gaibandha.</p>
-                <p>In 2024 our dreams got even bigger. We formed the Anisa Foundation with a vision of a thriving Gaibandha where everyone has access to the resources they need for a good life.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="logo-text">
     <div class="content-width">
         <div class="content">

@@ -4,16 +4,13 @@ get_header();
 
 ?>
 
+<section>
+	<div class="content-width">
+		<div class="text">
+			<?php the_content();?>
+		</div>
+	</div>
+</section>
 
-<?php the_post();
 
-	the_content();
-
-?>
-
-
-<?php 
-
-get_footer();
-
-?>
+<?php  get_footer();

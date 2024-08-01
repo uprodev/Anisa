@@ -14,23 +14,7 @@ if( have_rows('content', $id) ): ?>
 
 
 
-<section class="bg-text-img">
-    <div class="content-width">
-        <div class="content">
-            <div class="text">
-                <h2>Give back </h2>
-                <h4>To Gaibandha</h4>
-                <p>Want to be part of leading the transformation of Gaibandha and our people? We’d love your support. Contact us to learn more about how you can help most right now.</p>
-                <div class="btn-wrap">
-                    <a href="#contact" class="btn-arrow fancybox btn-white">See how you can help <img src="img/arrow.svg" alt=""></a>
-                </div>
-            </div>
-            <figure>
-                <img src="img/img-6.png" alt="">
-            </figure>
-        </div>
-    </div>
-</section>
+
 
 <section class="slider-block">
     <div class="content-width">

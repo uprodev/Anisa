@@ -16,7 +16,11 @@
     <div class="top-line">
         <div class="content-width">
             <div class="logo-wrap">
-                <a href="<?= get_home_url();?>"><img src="img/logo.svg" alt=""></a>
+                <?php $logo = get_field('logo_header', 'options');
+
+                if($logo):?>
+                    <a href="<?= get_home_url();?>"><img src="<?= $logo['url'];?>" alt="<?= $logo['alt'];?>"></a>
+                <?php endif;?>
             </div>
         </div>
     </div>
